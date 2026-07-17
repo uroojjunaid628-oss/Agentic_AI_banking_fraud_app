@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banking Fraud Investigation</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}">
+
+    <script defer
+        src="{{ url_for('static', path='script.js') }}">
+    </script>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>Banking Fraud Investigation</h1>
+
+    <p class="subtitle">
+        Agentic AI Powered Banking Security System
+    </p>
+
+    <div class="input-section">
+
+        <label>Transaction ID</label>
+
+        <input
+            type="number"
+            id="transactionId"
+            placeholder="Enter Transaction ID">
+
+        <button onclick="investigateTransaction()">
+            Investigate Transaction
+        </button>
+
+    </div>
+
+    <div id="loading" class="loading hidden">
+
+        <div class="spinner"></div>
+
+        <p>AI Agents are investigating...</p>
+
+    </div>
+
+    <div id="result" class="result hidden">
+
+        <h2>Investigation Report</h2>
+
+        <div class="row">
+            <span>Transaction ID</span>
+            <span id="transaction_id"></span>
+        </div>
+
+        <div class="row">
+            <span>Customer ID</span>
+            <span id="customer_id"></span>
+        </div>
+
+        <div class="row">
+            <span>Fraud Score</span>
+            <span id="fraud_score"></span>
+        </div>
+
+        <div class="row">
+            <span>Risk Level</span>
+            <span id="risk_level"></span>
+        </div>
+
+        <div class="row">
+            <span>Recommendation</span>
+            <span id="recommendation"></span>
+        </div>
+
+        <div class="summary">
+
+            <h3>AI Investigation Summary</h3>
+
+            <p id="ai_explanation"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

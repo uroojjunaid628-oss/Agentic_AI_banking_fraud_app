@@ -1,0 +1,13 @@
+fastapi
+uvicorn 
+langchain 
+langchain-groq 
+groq 
+sqlalchemy 
+psycopg2-binary 
+pandas 
+openpyxl 
+python-dotenv 
+pydantic 
+jinja2 
+python-multipart
