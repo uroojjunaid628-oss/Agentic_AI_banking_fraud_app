@@ -6,10 +6,10 @@
     <title>Banking Fraud Investigation</title>
 
     <link rel="stylesheet"
-        href="{{ url_for('static', path='style.css') }}">
+          href="{{ url_for('static', path='style.css') }}">
 
     <script defer
-        src="{{ url_for('static', path='script.js') }}">
+            src="{{ url_for('static', path='script.js') }}">
     </script>
 </head>
 
@@ -50,38 +50,205 @@
 
     <div id="result" class="result hidden">
 
-        <h2>Investigation Report</h2>
+        <h2>Banking Fraud Investigation Report</h2>
 
-        <div class="row">
-            <span>Transaction ID</span>
-            <span id="transaction_id"></span>
-        </div>
+        <!-- ================= Investigation Summary ================= -->
 
-        <div class="row">
-            <span>Customer ID</span>
-            <span id="customer_id"></span>
-        </div>
+        <h3>Investigation Summary</h3>
 
-        <div class="row">
-            <span>Fraud Score</span>
-            <span id="fraud_score"></span>
-        </div>
+        <table class="report-table">
 
-        <div class="row">
-            <span>Risk Level</span>
-            <span id="risk_level"></span>
-        </div>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
 
-        <div class="row">
-            <span>Recommendation</span>
-            <span id="recommendation"></span>
-        </div>
+            <tr>
+                <td>Transaction ID</td>
+                <td id="transaction_id"></td>
+            </tr>
+
+            <tr>
+                <td>Customer ID</td>
+                <td id="customer_id"></td>
+            </tr>
+
+            <tr>
+                <td>Fraud Score</td>
+                <td id="fraud_score"></td>
+            </tr>
+
+            <tr>
+                <td>Risk Level</td>
+                <td id="risk_level"></td>
+            </tr>
+
+            <tr>
+                <td>Recommendation</td>
+                <td id="recommendation"></td>
+            </tr>
+
+        </table>
+
+        <!-- ================= Transaction Agent ================= -->
+
+        <h3>Transaction Agent Report</h3>
+
+        <table class="report-table">
+
+            <tr>
+                <th>Transaction Information</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>Transaction Amount</td>
+                <td id="transaction_amount"></td>
+            </tr>
+
+            <tr>
+                <td>Transaction Date</td>
+                <td id="transaction_date"></td>
+            </tr>
+
+            <tr>
+                <td>Transaction Time</td>
+                <td id="transaction_time"></td>
+            </tr>
+
+            <tr>
+                <td>Transaction Type</td>
+                <td id="transaction_type"></td>
+            </tr>
+
+            <tr>
+                <td>Transaction Location</td>
+                <td id="transaction_location"></td>
+            </tr>
+
+        </table>
+
+        <!-- ================= Customer Agent ================= -->
+
+        <h3>Customer Agent Report</h3>
+
+        <table class="report-table">
+
+            <tr>
+                <th>Customer Information</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>Home Location</td>
+                <td id="home_location"></td>
+            </tr>
+
+            <tr>
+                <td>Card Type</td>
+                <td id="card_type"></td>
+            </tr>
+
+            <tr>
+                <td>Account Balance</td>
+                <td id="account_balance"></td>
+            </tr>
+
+            <tr>
+                <td>Previous Fraud Count</td>
+                <td id="previous_fraud_count"></td>
+            </tr>
+
+            <tr>
+                <td>Total Transactions</td>
+                <td id="total_transactions"></td>
+            </tr>
+
+        </table>
+
+        <!-- ================= Fraud Agent ================= -->
+
+        <h3>Fraud Agent Report</h3>
+
+        <table class="report-table">
+
+            <tr>
+                <th>Fraud Indicator</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>International Transaction</td>
+                <td id="international_transaction"></td>
+            </tr>
+
+            <tr>
+                <td>New Merchant</td>
+                <td id="new_merchant"></td>
+            </tr>
+
+            <tr>
+                <td>Unusual Time Transaction</td>
+                <td id="unusual_time_transaction"></td>
+            </tr>
+
+            <tr>
+                <td>Failed Transaction Count</td>
+                <td id="failed_transaction_count"></td>
+            </tr>
+
+            <tr>
+                <td>Distance From Home</td>
+                <td id="distance_from_home"></td>
+            </tr>
+
+        </table>
+
+        <!-- ================= Decision Agent ================= -->
+
+        <h3>Decision Agent Report</h3>
+
+        <table class="report-table">
+
+            <tr>
+                <th>Decision</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>Fraud Score</td>
+                <td id="decision_fraud_score"></td>
+            </tr>
+
+            <tr>
+                <td>Risk Level</td>
+                <td id="decision_risk_level"></td>
+            </tr>
+
+            <tr>
+                <td>Recommendation</td>
+                <td id="decision_recommendation"></td>
+            </tr>
+
+        </table>
+
+        <!-- ================= AI Summary ================= -->
 
         <div class="summary">
 
             <h3>AI Investigation Summary</h3>
 
-            <p id="ai_explanation"></p>
+            <p id="investigation_summary"></p>
+
+        </div>
+
+        <!-- ================= PDF ================= -->
+
+        <div class="download-section">
+
+            <button id="downloadPdf" disabled>
+                Download Investigation Report (PDF)
+            </button>
 
         </div>
 

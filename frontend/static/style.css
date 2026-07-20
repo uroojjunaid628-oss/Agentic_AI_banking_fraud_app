@@ -255,3 +255,91 @@ transform:translateY(0);
 
     display:none;
 }
+
+.report-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:20px 0 35px 0;
+
+    background:#0f2743;
+
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+.report-table th{
+
+    background:#17365d;
+
+    color:#ffffff;
+
+    padding:15px;
+
+    text-align:left;
+
+    font-size:17px;
+}
+
+.report-table td{
+
+    padding:14px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    color:#dbe7f5;
+}
+
+.report-table tr:last-child td{
+
+    border-bottom:none;
+}
+
+.result h3{
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+    color:#7c3aed;
+
+    font-size:24px;
+
+    border-left:5px solid #06b6d4;
+
+    padding-left:12px;
+}
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin:35px 0;
+}
+
+
+.download-section{
+
+    margin-top:35px;
+
+    text-align:center;
+}
+
+.download-section button{
+
+    width:320px;
+}
+
+.download-section button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+}

@@ -12,3 +12,4 @@ pydantic
 jinja2 
 python-multipart
 langsmith
+reportlab
