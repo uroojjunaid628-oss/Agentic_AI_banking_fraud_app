@@ -2,6 +2,7 @@ from agents.customer_verification_agent import CustomerAgent
 from agents.transaction_verification_agent import TransactionAgent
 from agents.fraud_analysis_agent import FraudAgent
 from agents.decision_agent import DecisionAgent
+from langsmith import traceable
 
 from services.database_service import get_transaction_by_id
 
@@ -18,7 +19,7 @@ class CoordinatorAgent:
         self.customer_agent = CustomerAgent()
         self.fraud_agent = FraudAgent()
         self.decision_agent = DecisionAgent()
-
+    @traceable(name = "Coordinator_agent")
     def run(self, transaction_id):
         """
         Execute the complete fraud investigation workflow.

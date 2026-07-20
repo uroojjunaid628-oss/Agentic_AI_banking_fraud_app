@@ -1,4 +1,5 @@
 from services.database_service import get_customer_transactions
+from langsmith import traceable
 
 
 class CustomerAgent:
@@ -9,7 +10,7 @@ class CustomerAgent:
 
     def __init__(self):
         self.name = "Customer Agent"
-
+    @traceable(name = "Customer_verification_agent")
     def analyze_customer(self, customer_id):
         """
         Retrieve customer history and prepare

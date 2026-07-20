@@ -1,4 +1,5 @@
 from services.llm_service import LLMService
+from langsmith import traceable
 
 
 class DecisionAgent:
@@ -105,7 +106,7 @@ explaining WHY this decision was reached.
             fraud_score += 15
 
         return fraud_score
-
+    @traceable(name = "Decision_agent")
     def make_decision(self, reports):
         """
         Generate the final fraud investigation report.

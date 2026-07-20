@@ -1,5 +1,5 @@
 import os
-
+from langsmith import traceable
 from dotenv import load_dotenv
 from groq import Groq
 
@@ -24,7 +24,7 @@ class LLMService:
 
         self.model = "llama-3.1-8b-instant"
 
-
+    @traceable(name="Groq LLM")
     def generate_response(self, prompt):
         """
         Send a prompt to the LLM and return its response.
@@ -49,4 +49,7 @@ class LLMService:
 
             print(f"LLM Error:\n{error}")
 
-            return None        
+            return (
+        "AI explanation could not be generated because the "
+        "language model service is currently unavailable."
+    )

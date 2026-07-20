@@ -1,3 +1,4 @@
+from langsmith import traceable
 class TransactionAgent:
     """
     Responsible for verifying transaction details
@@ -6,7 +7,10 @@ class TransactionAgent:
 
     def __init__(self):
         self.name = "Transaction Agent"
-
+    @traceable(
+    name="Transaction_verification_agent",
+    project_name="Banking Fraud Investigation System"
+)
     def analyze_transaction(self, transaction):
         """
         Analyze a transaction and prepare a

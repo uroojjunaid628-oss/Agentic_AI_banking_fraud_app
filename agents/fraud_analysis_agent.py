@@ -1,3 +1,4 @@
+from langsmith import traceable
 class FraudAgent:
     """
     Responsible for analyzing fraud indicators
@@ -6,7 +7,7 @@ class FraudAgent:
 
     def __init__(self):
         self.name = "Fraud Agent"
-
+    @traceable(name = "Fraud_analysis_agent")
     def analyze_fraud(self, transaction):
         """
         Analyze fraud-related indicators from the transaction
