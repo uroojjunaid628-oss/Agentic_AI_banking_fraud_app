@@ -1,0 +1,187 @@
+body {
+
+    margin:0;
+    padding:0;
+
+    background:#f4f7fb;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+.report-container {
+
+    width:85%;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+}
+
+
+
+.header {
+
+    text-align:center;
+
+    padding-bottom:30px;
+
+    border-bottom:2px solid #0B3C5D;
+
+}
+
+
+
+.header h1 {
+
+    color:#0B3C5D;
+
+    font-size:28px;
+
+}
+
+
+
+.header p {
+
+    color:#555;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.section {
+
+    margin-top:35px;
+
+}
+
+
+
+.section h2 {
+
+    color:#0B3C5D;
+
+    font-size:18px;
+
+    border-left:5px solid #0B3C5D;
+
+    padding-left:10px;
+
+}
+
+
+
+
+.info-card {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+
+.info-card div {
+
+    background:#f8fafc;
+
+    padding:15px;
+
+    border-radius:8px;
+
+}
+
+
+
+.info-card span {
+
+    display:block;
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+
+
+.info-card strong {
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.risk-card {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+
+.risk-card div {
+
+    flex:1;
+
+    background:#eef6ff;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+}
+
+
+
+.risk-card label {
+
+    color:#555;
+
+}
+
+
+
+.risk-card h3 {
+
+    color:#b91c1c;
+
+}
+
+
+
+
+
+.summary-box {
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    line-height:1.7;
+
+    border-radius:10px;
+
+}
