@@ -1,112 +1,147 @@
-body {
+/* 
+   BANKING FRAUD INVESTIGATION REPORT
+   Agentic AI Report Template
+ */
 
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
 
-    background:#f4f7fb;
+body{
 
-    font-family: Arial, sans-serif;
+    background:#edf2f7;
+
+    font-family:Segoe UI, Arial, sans-serif;
+
+    color:#2c3e50;
+
+    line-height:1.7;
 
 }
 
 
+/* 
+    REPORT CONTAINER
+ */
 
-.report-container {
+.report-container{
 
-    width:85%;
+    width:900px;
 
-    margin:auto;
+    margin:40px auto;
 
-    background:white;
+    background:#ffffff;
 
-    padding:40px;
+    padding:45px;
+
+    border-radius:10px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 }
 
 
+/* 
+    HEADER
+ */
 
-.header {
+.report-header{
 
     text-align:center;
 
-    padding-bottom:30px;
+    border-bottom:3px solid #0B3C5D;
 
-    border-bottom:2px solid #0B3C5D;
+    padding-bottom:25px;
+
+    margin-bottom:35px;
 
 }
 
-
-
-.header h1 {
+.report-header h1{
 
     color:#0B3C5D;
 
-    font-size:28px;
+    font-size:32px;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
 
 }
 
-
-
-.header p {
+.report-header p{
 
     color:#555;
 
-    font-size:16px;
+    font-size:17px;
 
 }
 
 
+/* 
+    SECTION
+ */
 
-
-
-.section {
+.section{
 
     margin-top:35px;
 
 }
 
-
-
-.section h2 {
+.section h2{
 
     color:#0B3C5D;
 
-    font-size:18px;
+    font-size:20px;
 
-    border-left:5px solid #0B3C5D;
+    margin-bottom:18px;
 
-    padding-left:10px;
+    border-left:6px solid #0B3C5D;
+
+    padding-left:12px;
+
+}
+
+.section-description{
+
+    margin-bottom:18px;
+
+    color:#555;
+
+    text-align:justify;
 
 }
 
 
+/* 
+    INFORMATION GRID
+ */
 
-
-.info-card {
+.info-grid{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:15px;
+    gap:18px;
 
 }
 
-
-
-.info-card div {
+.info-card{
 
     background:#f8fafc;
 
-    padding:15px;
+    border-left:5px solid #0B3C5D;
 
     border-radius:8px;
 
+    padding:18px;
+
 }
 
-
-
-.info-card span {
+.info-card span{
 
     display:block;
 
@@ -114,74 +149,464 @@ body {
 
     font-size:13px;
 
-}
-
-
-
-.info-card strong {
-
-    font-size:16px;
+    margin-bottom:6px;
 
 }
 
+.info-card strong{
+
+    font-size:17px;
+
+    color:#1f2937;
+
+}
 
 
+/* 
+    RISK SECTION
+ */
 
-
-.risk-card {
+.risk-grid{
 
     display:flex;
-
-    justify-content:space-between;
 
     gap:20px;
 
 }
 
-
-
-.risk-card div {
+.risk-card{
 
     flex:1;
 
     background:#eef6ff;
 
-    padding:20px;
+    border-top:5px solid #0B3C5D;
+
+    border-radius:10px;
 
     text-align:center;
 
-    border-radius:10px;
+    padding:25px;
 
 }
 
+.risk-card span{
 
-
-.risk-card label {
+    display:block;
 
     color:#555;
 
+    margin-bottom:12px;
+
+    font-size:15px;
+
 }
 
-
-
-.risk-card h3 {
+.risk-card h3{
 
     color:#b91c1c;
 
+    font-size:24px;
+
 }
 
 
+/* 
+    CONTENT BOX
+ */
 
-
-
-.summary-box {
+.content-box{
 
     background:#f8fafc;
 
-    padding:20px;
+    border-radius:10px;
 
-    line-height:1.7;
+    padding:25px;
+
+    border:1px solid #dde6ef;
+
+}
+
+.content-box p{
+
+    margin-bottom:16px;
+
+    text-align:justify;
+
+}
+
+.content-box h3{
+
+    color:#0B3C5D;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+}
+
+.content-box hr{
+
+    border:none;
+
+    border-top:1px solid #d9d9d9;
+
+    margin:25px 0;
+
+}
+
+
+/* 
+    TABLE
+ */
+
+.report-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:18px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.report-table thead{
+
+    background:#0B3C5D;
+
+    color:white;
+
+}
+
+.report-table th{
+
+    padding:14px;
+
+    text-align:left;
+
+    border:1px solid #d7d7d7;
+
+}
+
+.report-table td{
+
+    padding:14px;
+
+    border:1px solid #d7d7d7;
+
+    vertical-align:top;
+
+    text-align:justify;
+
+}
+
+.report-table tbody tr:nth-child(even){
+
+    background:#f7fafc;
+
+}
+
+.report-table tbody tr:hover{
+
+    background:#eef6ff;
+
+}
+
+
+/* 
+STRONG TEXT
+ */
+
+strong{
+
+    color:#0B3C5D;
+
+}
+
+/*
+    PAGE BREAKS FOR PDF
+ */
+
+.section{
+
+    page-break-inside:avoid;
+
+}
+
+.report-table{
+
+    page-break-inside:auto;
+
+}
+
+.report-table tr{
+
+    page-break-inside:avoid;
+
+    page-break-after:auto;
+
+}
+
+.content-box{
+
+    page-break-inside:avoid;
+
+}
+
+
+/* 
+    PRINT STYLES
+ */
+
+@media print{
+
+    body{
+
+        background:white;
+
+    }
+
+    .report-container{
+
+        width:100%;
+
+        margin:0;
+
+        padding:25px;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+    }
+
+    .section{
+
+        page-break-inside:avoid;
+
+    }
+
+    .report-table{
+
+        font-size:12px;
+
+    }
+
+    .report-table th{
+
+        padding:10px;
+
+    }
+
+    .report-table td{
+
+        padding:10px;
+
+    }
+
+}
+
+
+/* 
+    RESPONSIVE DESIGN
+ */
+
+@media(max-width:900px){
+
+    .report-container{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .risk-grid{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* 
+MOBILE
+ */
+
+@media(max-width:600px){
+
+    .report-header h1{
+
+        font-size:24px;
+
+    }
+
+    .section h2{
+
+        font-size:18px;
+
+    }
+
+    .report-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+}
+
+
+/* 
+    TABLE COLUMN WIDTHS
+*/
+
+.report-table th:nth-child(1),
+.report-table td:nth-child(1){
+
+    width:22%;
+
+    font-weight:600;
+
+}
+
+.report-table th:nth-child(2),
+.report-table td:nth-child(2){
+
+    width:18%;
+
+}
+
+.report-table th:nth-child(3),
+.report-table td:nth-child(3){
+
+    width:60%;
+
+}
+
+
+/*
+   HOVER EFFECTS
+ */
+
+.info-card{
+
+    transition:.25s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.risk-card{
+
+    transition:.25s;
+
+}
+
+.risk-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+
+}
+
+
+/* 
+    SCROLLBAR
+ */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0B3C5D;
 
     border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#07283d;
+
+}
+
+
+/* 
+    SELECTION
+ */
+
+::selection{
+
+    background:#0B3C5D;
+
+    color:white;
+
+}
+
+
+/* 
+    SPACING
+ */
+
+.section:last-child{
+
+    margin-bottom:20px;
+
+}
+
+.report-table:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* 
+    FOOTER 
+ */
+
+.footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:13px;
+
+    border-top:1px solid #ddd;
+
+    padding-top:15px;
 
 }
